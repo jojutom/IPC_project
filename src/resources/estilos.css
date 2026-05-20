@@ -1,68 +1,198 @@
-/*
- * Copyright (c) 2014, Oracle and/or its affiliates.
- * All rights reserved. Use is subject to license terms.
- *
- * This file is available and licensed under the following license:
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- *  - Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *  - Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the distribution.
- *  - Neither the name of Oracle Corporation nor the names of its
- *    contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+/* ==========================================================================
+   SAFORTRACKS GLOBAL STYLE SHEET (SISTEMA DE DISEÑO DE ESCRITORIO)
+   ========================================================================== */
 
-/*******************************************************************************
- *                                                                             *
- * Embedded Styling                                                            *
- *                                                                             *
- ******************************************************************************/
-
-
-
-/*******************************************************************************
- *                                                                             *
- * High Contrast Theme                                                         *
- *                                                                             *
- ******************************************************************************/
-
-.contrast {
-    -app-color-hi: #5bf900;
-    -app-color-lo: black;
-    -app-hover: #666666;
-    -fx-background-color: -app-color-lo;
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE COLOR Y FUENTES (Esencia del Club Running la Safor)
+   -------------------------------------------------------------------------- */
+.root {
+    /* Neutros Principales (Figura-Fondo) */
+    -fx-primary-bg: #F8FAFC;       /* Gris ultra-claro para el fondo principal */
+    -fx-card-bg: #FFFFFF;          /* Blanco puro para contenedores/tarjetas flotantes */
+    
+    /* Colores de Identidad (Semejanza y Puntos Focales) */
+    -fx-sidebar-bg: #0F172A;       /* Azul Pizarra muy oscuro (Sidebar Premium) */
+    -fx-naranja-safor: #F97316;    /* Naranja del logotipo (Llamadas a la acción / CTA) */
+    -fx-naranja-hover: #EA580C;    /* Naranja más oscuro para el estado presionado */
+    -fx-verde-safor: #16A34A;      /* Verde del logotipo (Éxito, rutas activas, OK) */
+    -fx-rojo-alerta: #DC2626;      /* Rojo carmín elegante (Cerrar sesión / Errores) */
+    
+    /* Colores de Bordes y Textos (Continuidad y Cierre) */
+    -fx-border-color-soft: #E2E8F0;/* Gris suave para delimitar sin ensuciar */
+    -fx-text-main: #0F172A;        /* Azul pizarra casi negro para títulos y lectura principal */
+    -fx-text-muted: #64748B;       /* Gris medio para etiquetas secundarios y placeholders */
+    -fx-text-light: #F1F5F9;       /* Gris muy claro/blanco para textos sobre fondos oscuros */
+    
+    /* Tipografía Global */
+    -fx-font-family: "Segoe UI", "SansSerif", "Helvetica";
 }
 
-/*-------------------------- map pin ------------------------- */
-
-.map-pin {
-    -fx-shape: "M13.558,0C6.07,0,0,6.07,0,13.558s13.558,22.346,13.558,22.346s13.558-14.858,13.558-22.346S21.045,0,13.558,0z
-M13.558,20.762c-4.084,0-7.395-3.311-7.395-7.395s3.311-7.395,7.395-7.395c4.084,0,7.396,3.311,7.396,7.395
-S17.642,20.762,13.558,20.762z";    
-    -fx-background-color: black, white;
-    -fx-background-insets: 0, 2;
-    -fx-effect: dropshadow( two-pass-box, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 10 );
-    -fx-pref-width: 48;
-    -fx-pref-height: 60;
+/* --------------------------------------------------------------------------
+   2. CONTENEDORES RAÍZ Y ESTRUCTURA (Ley de la Región Común)
+   -------------------------------------------------------------------------- */
+/* Fondo general de la aplicación */
+.border-pane {
+    -fx-background-color: -fx-primary-bg;
 }
-.map-pin .arrow-button .arrow {
-    -fx-padding: 0;
+
+/* Barra lateral izquierda (Sidebar) */
+.sidebar {
+    -fx-background-color: -fx-sidebar-bg;
+    -fx-padding: 25 15 25 15;
+}
+
+/* Tarjetas flotantes / Fichas (como la de Modificar Perfil) */
+.card-container {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    /* Efecto de sombra sutil para despegar la figura del fondo */
+    -fx-effect: dropshadow(three-pass-box, rgba(15, 23, 42, 0.05), 15, 0, 0, 4);
+    -fx-padding: 30;
+}
+
+/* --------------------------------------------------------------------------
+   3. BOTONES (Ley de Semejanza: misma forma y comportamiento para igual jerarquía)
+   -------------------------------------------------------------------------- */
+
+/* BOTONES PRINCIPALES DEL MENÚ (Importar GPX, Importar Mapa, Actividades, Acumulados) */
+.btn-menu-action {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: -fx-text-main;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -fx-border-color-soft;
+    -fx-border-width: 1;
+    -fx-padding: 12 24 12 24;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+/* Efecto Hover (Contraste inmediato al pasar el ratón) */
+.btn-menu-action:hover {
+    -fx-background-color: #E2E8F0;
+    -fx-border-color: -fx-naranja-safor; /* Detalle sutil de identidad */
+}
+
+/* BOTÓN DE LLAMADA A LA ACCIÓN (Guardar Cambios, Confirmar Registro, etc.) */
+.btn-primary {
+    -fx-background-color: -fx-naranja-safor;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+    -fx-background-radius: 8;
+    -fx-padding: 12 32 12 32;
+    -fx-cursor: hand;
+}
+.btn-primary:hover {
+    -fx-background-color: -fx-naranja-hover;
+}
+
+/* BOTONES SECUNDARIOS / NEUTROS (Seleccionar archivo, Cancelar) */
+.btn-secondary {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20; /* Estilo píldora */
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover {
+    -fx-background-color: -fx-border-color-soft;
+    -fx-text-fill: -fx-text-main;
+}
+
+/* BOTÓN DE CERRAR SESIÓN (Punto Focal de Advertencia) */
+.btn-danger {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F87171; /* Rojo suave en estado de reposo */
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+.btn-danger:hover {
+    -fx-background-color: rgba(220, 38, 38, 0.1); /* Fondo rojo muy transparente */
+    -fx-text-fill: #EF4444;
+    -fx-background-radius: 6;
+}
+
+/* --------------------------------------------------------------------------
+   4. CAMPOS DE FORMULARIO (Ley de Continuidad y Cierre)
+   -------------------------------------------------------------------------- */
+/* Estilo moderno para TextField, PasswordField y DatePicker */
+.text-field, .date-picker {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: -fx-border-color-soft;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12 8 12;
+    -fx-text-fill: -fx-text-main;
+    -fx-font-size: 14px;
+}
+/* Cuando el usuario hace clic en el campo (Foco activo) */
+.text-field:focused, .date-picker:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: -fx-naranja-safor;
+}
+
+/* Campos Bloqueados / No editables (Anomalía por Semejanza para indicar bloqueo) */
+.text-field:disabled, .text-field[editable="false"] {
+    -fx-background-color: #E2E8F0;
+    -fx-text-fill: #94A3B8;
+    -fx-border-color: -fx-border-color-soft;
+    -fx-opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   5. TEXTOS Y JERARQUÍAS (Ley de la Buena Forma o Pregnancia)
+   -------------------------------------------------------------------------- */
+/* Títulos Principales de Pantalla (Modificar Perfil, Ver Actividades...) */
+.title-large {
+    -fx-text-fill: -fx-text-main;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+}
+
+/* Etiquetas de los formularios (Labels de los campos) */
+.label-form {
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Enlaces del Sidebar (Modificar Perfil, Historial) */
+.hyperlink-sidebar {
+    -fx-text-fill: #94A3B8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+}
+.hyperlink-sidebar:visited {
+    -fx-text-fill: #94A3B8;
+}
+.hyperlink-sidebar:hover {
+    -fx-text-fill: white; /* Resalta al pasar por encima */
+}
+
+/* --------------------------------------------------------------------------
+   6. COMPONENTES EXTRA (Avatar e Histogramas futuros)
+   -------------------------------------------------------------------------- */
+/* Marco circular para las imágenes de usuario */
+.avatar-frame {
+    -fx-border-color: -fx-border-color-soft;
+    -fx-border-width: 2;
+    -fx-border-radius: 100;
+}
+.input-custom {
+    -fx-background-color: #F8FAFC !important;
+    -fx-border-color: #E2E8F0 !important;
+    -fx-border-width: 1 !important;
+    -fx-border-radius: 6 !important;
+    -fx-background-radius: 6 !important;
+    -fx-padding: 8 12 8 12 !important;
+    -fx-text-fill: #0F172A !important;
 }

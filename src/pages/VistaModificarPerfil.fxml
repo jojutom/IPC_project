@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.perfil.VistaModificarPerfilController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-background-radius: 15;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.perfil.VistaModificarPerfilController">
    <children>
       <Label stylesheets="@../../menuprincipaldiego/estilos.css" text="Modificar Perfil">
          <font>
@@ -38,7 +38,7 @@
                      <children>
                         <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #E2E8F0; fx-border-width: 2; -fx-border-radius: 100; -fx-background-radius: 100;">
                            <image>
-                              <Image url="@../../foto%20perfil/blank-profile-picture-973460_960_720-500x500.png" />
+                              <Image url="@../imgs/defaultAvatar.png" />
                            </image>
                         </ImageView>
                         <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="181.0" style="-fx-background-color: #F1F5F9; -fx-background-radius: 20; -fx-padding: 8 20 8 20;" text="Seleccionar" textFill="#0f172a">

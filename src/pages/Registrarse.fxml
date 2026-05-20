@@ -23,7 +23,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../menuprincipaldiego/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane prefHeight="598.0" prefWidth="977.0">
          <columnConstraints>
@@ -55,7 +55,7 @@
                      <children>
                         <ImageView fitHeight="118.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../imagenes/Logo-photoaidcom-cropped.jpg" />
+                              <Image url="@../imgs/circledogo.jpg" />
                            </image>
                            <cursor>
                               <Cursor fx:constant="S_RESIZE" />

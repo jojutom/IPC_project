@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="contenedorPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuprincipaldiego.FXMLController">
+<BorderPane fx:id="contenedorPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuprincipaldiego.FXMLController">
    <center>
       <HBox prefHeight="535.0" prefWidth="902.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,7 +21,7 @@
                <children>
                   <ImageView fitHeight="47.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" styleClass="avatar-frame">
                      <image>
-                        <Image url="@../foto%20perfil/blank-profile-picture-973460_960_720-500x500.png" />
+                        <Image url="@../imgs/defaultAvatar.png" />
                      </image>
                      <VBox.margin>
                         <Insets top="5.0" />
@@ -42,7 +42,7 @@
             </VBox>
             <ImageView fitHeight="234.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/Logo-photoaidcom-cropped.jpg" />
+                  <Image url="@../imgs/circledogo.jpg" />
                </image>
                <HBox.margin>
                   <Insets left="160.0" right="20.0" top="150.0" />

@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="714.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../menuprincipaldiego/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="714.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane prefHeight="442.0" prefWidth="717.0">
         <columnConstraints>
@@ -46,7 +46,7 @@
                      <children>
                         <ImageView fitHeight="133.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../imagenes/Logo-photoaidcom-cropped.jpg" />
+                              <Image url="@../imgs/circledogo.jpg" />
                            </image>
                            <HBox.margin>
                               <Insets bottom="10.0" />
@@ -105,7 +105,7 @@
                <children>
                   <ImageView cache="true" fitHeight="442.0" fitWidth="211.0" opacity="0.98" pickOnBounds="true">
                      <image>
-                        <Image url="@../imagenes/autenticarbosque1.jpg" />
+                        <Image url="@../imgs/loginLeft.jpg" />
                      </image>
                      <effect>
                         <InnerShadow blurType="GAUSSIAN" choke="0.4" />
@@ -116,7 +116,7 @@
                <children>
                   <ImageView fitHeight="442.0" fitWidth="214.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../imagenes/autenticarbosque2.jpeg" />
+                        <Image url="@../imgs/loginRight.jpeg" />
                      </image>
                      <effect>
                         <InnerShadow blurType="GAUSSIAN" choke="0.4" />

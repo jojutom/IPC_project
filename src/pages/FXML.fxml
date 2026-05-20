@@ -3,9 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -30,7 +28,7 @@
                   <Hyperlink onAction="#mostrarPantallaPerfil" text="Modificar Perfil" textFill="#e2e8f0" />
                   <Hyperlink prefHeight="23.0" prefWidth="57.0" text="Historial" textFill="#e2e8f0" />
                   <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="106.0" style="-fx-border-color: black;" VBox.vgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #EF4444;" text="Cerrar Sesión">
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" styleClass="btn-danger" text="Cerrar Sesión">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -42,11 +40,14 @@
             </VBox>
             <ImageView fitHeight="234.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imgs/circledogo.jpg" />
+                  <Image url="@../imgs/circledLogo.jpg" />
                </image>
                <HBox.margin>
                   <Insets left="160.0" right="20.0" top="150.0" />
                </HBox.margin>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" />
+               </effect>
             </ImageView>
             <VBox alignment="CENTER" prefHeight="534.0" prefWidth="238.0" spacing="18.0">
                <children>
@@ -62,25 +63,4 @@
          </BorderPane.margin>
       </HBox>
    </center>
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
 </BorderPane>

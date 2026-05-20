@@ -85,10 +85,28 @@
     -fx-padding: 12 32 12 32;
     -fx-cursor: hand;
 }
+/* BOTÓN DE LLAMADA A LA ACCIÓN (Optimizado para evitar crasheos) */
+.btn-primary {
+    -fx-background-color: -fx-naranja-safor;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI", "SansSerif";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    
+    /* Forzamos a que el radio del fondo y del borde vayan de la mano */
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    
+    /* Aseguramos un padding seguro con unidades explícitas */
+    -fx-padding: 10px 24px 10px 24px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+
+/* Estado Hover seguro */
 .btn-primary:hover {
     -fx-background-color: -fx-naranja-hover;
 }
-
 /* BOTONES SECUNDARIOS / NEUTROS (Seleccionar archivo, Cancelar) */
 .btn-secondary {
     -fx-background-color: #F1F5F9;

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="213.0" prefWidth="600.0" styleClass="card-container" stylesheets="@../resources/estilos.css">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="362.0" styleClass="title-large" text="Actividades Recientes" />
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="325.0" styleClass="btn-primary" text="+ Añadir Nueva Actividad" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="167.0" spacing="15.0">
+               <children>
+                  <TextField prefHeight="38.0" prefWidth="280.0" promptText="Buscar actividades..." styleClass="text-field" />
+                  <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="37.0" styleClass="label-form" text="Tipo" />
+                  <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="63.0" promptText="All" styleClass="text-field" />
+                  <Label styleClass="label-form" text="Fecha" />
+                  <DatePicker maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="150.0" styleClass="text-field" />
+               </children>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView prefHeight="198.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Icon" />
+          <TableColumn prefWidth="150.0" text="Actividad" />
+            <TableColumn prefWidth="150.0" text="Fecha" />
+            <TableColumn prefWidth="75.0" text="Distancia" />
+            <TableColumn prefWidth="75.0" text="Tiempo" />
+            <TableColumn prefWidth="75.0" text="Acciones" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="714.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../menuprincipaldiego/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane prefHeight="442.0" prefWidth="717.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="212.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="388.6666870117187" minWidth="10.0" prefWidth="294.3333435058594" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="212.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="494.0" prefWidth="392.0" GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints fillHeight="false" maxHeight="148.6666463216146" minHeight="10.0" prefHeight="141.33333333333334" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="111.0" minHeight="10.0" prefHeight="43.66668701171875" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="125.33332570393881" minHeight="10.0" prefHeight="74.00001525878909" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="88.99999618530273" minHeight="10.0" prefHeight="76.66665140787757" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="110.0" minHeight="0.0" prefHeight="42.666646321614564" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="113.33331298828122" minHeight="6.000020345052064" prefHeight="66.66668701171875" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="173.0" prefWidth="455.0" style="-fx-alignment: down;">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/Logo-photoaidcom-cropped.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="392.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="92.0" prefWidth="200.0" styleClass="title-large" text="AUTENTICAR">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="83.0" prefWidth="413.0" GridPane.rowIndex="2">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="77.0" prefWidth="213.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefWidth="367.0" styleClass="label-form" text="*Nickname" />
+                              <TextField prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="83.0" prefWidth="413.0" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="77.0" prefWidth="213.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="199.0" styleClass="label-form" text="*Contraseña" />
+                              <PasswordField prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="111.0" prefWidth="369.0" GridPane.rowIndex="4">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="btn-primary" text="AUTENTICAR" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="59.0" prefWidth="377.0" GridPane.rowIndex="5">
+                     <children>
+                        <Hyperlink prefHeight="61.0" prefWidth="207.0" text="No tienes cuenta todavia? Registrarse" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <VBox prefHeight="442.0" prefWidth="214.0">
+               <children>
+                  <ImageView cache="true" fitHeight="442.0" fitWidth="211.0" opacity="0.98" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imagenes/autenticarbosque1.jpg" />
+                     </image>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" choke="0.4" />
+                     </effect>
+                  </ImageView>
+               </children></VBox>
+            <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="443.0" prefWidth="252.0" GridPane.columnIndex="2">
+               <children>
+                  <ImageView fitHeight="442.0" fitWidth="214.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imagenes/autenticarbosque2.jpeg" />
+                     </image>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" choke="0.4" />
+                     </effect>
+                  </ImageView>
+               </children></VBox>
+         </children>
+      </GridPane>
+   </children>
+</HBox>

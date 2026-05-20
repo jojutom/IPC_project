@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="contenedorPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuprincipaldiego.FXMLController">
+   <center>
+      <HBox prefHeight="535.0" prefWidth="902.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #0F172A;">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" styleClass="avatar-frame">
+                     <image>
+                        <Image url="@../foto%20perfil/blank-profile-picture-973460_960_720-500x500.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Hyperlink onAction="#mostrarPantallaPerfil" text="Modificar Perfil" textFill="#e2e8f0" />
+                  <Hyperlink prefHeight="23.0" prefWidth="57.0" text="Historial" textFill="#e2e8f0" />
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="106.0" style="-fx-border-color: black;" VBox.vgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #EF4444;" text="Cerrar Sesión">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <ImageView fitHeight="234.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Logo-photoaidcom-cropped.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="160.0" right="20.0" top="150.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="534.0" prefWidth="238.0" spacing="18.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar GPX" textFill="#0f172a" />
+                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar Mapa" textFill="#0f172a" VBox.vgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Actividades" textFill="#0f172a" />
+                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Últimos 31 días" textFill="#0f172a" />
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

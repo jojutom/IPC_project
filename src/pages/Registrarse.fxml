@@ -20,7 +20,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -185,8 +184,10 @@
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="473.0" styleClass="label-form" text="Avatar &quot;Opcional&quot;" />
                         <StackPane prefHeight="63.0" prefWidth="426.0">
                            <children>
-                              <ImageView fitHeight="61.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER" />
-                              <Circle fill="#b8b5b2e7" radius="25.0" stroke="BLACK" strokeType="INSIDE" StackPane.alignment="CENTER" />
+                              <ImageView fx:id="imagePicked" fitHeight="61.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../imgs/defaultAvatar.png" />
+                           </image></ImageView>
                            </children>
                         </StackPane>
                      </children>

@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import pages.MenuPrincipalController;
 
 /**
  *
@@ -25,10 +26,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         mainStage = stage;
-        Parent root = FXMLLoader.load(getClass().getResource("/pages/Registrarse.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/pages/Autenticar.fxml"));
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/resources/logo.png")));
         actScene = new Scene(root);
-        stage.setTitle("La Safor APPs");
+        stage.setTitle("HortaRun, La Safor");
         stage.setScene(actScene);
         stage.show();
     }
@@ -51,7 +52,11 @@ public class Main extends Application {
     }
     
     public static void logInSuccesfull(String nick) {
-    
+        try {
+            Parent newRoot = FXMLLoader.load(Main.class.getResource("/pages/MenuPrincipal.fxml"));
+
+            mainStage.getScene().setRoot(newRoot);
+        } catch (IOException e) {}
     }
     
     public static void registerShow() {

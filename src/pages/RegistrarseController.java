@@ -5,16 +5,20 @@
 package pages;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import mapademo.Main;
 import upv.ipc.sportlib.SportActivityApp;
@@ -56,9 +60,13 @@ public class RegistrarseController implements Initializable {
     @FXML
     private ImageView leftImg;
     @FXML
-    private Pane paneLeft;
+    private StackPane leftPane;
     @FXML
-    private Pane paneRight;
+    private GridPane mainGrid;
+    @FXML
+    private ImageView imagePicked;
+    @FXML
+    private StackPane rightPane;
 
     /**
      * Initializes the controller class.
@@ -147,10 +155,21 @@ public class RegistrarseController implements Initializable {
     @FXML
     private void register(ActionEvent event) {
         String name = nicknameInput.getText();
-        /**if ( SportActivityApp.nickNameExists(name) ) {
-        
-        }^*/
-        String pass = passInput.getText();   
+        String pass = passInput.getText();
+        String mail = mailInput.getText();
+        String avatar = imagePicked.getImage().getUrl();
+        LocalDate birthDate = dateInput.getValue();
+        SportActivityApp app = SportActivityApp.getInstance();
+        if (app.nickNameExists(name)) {
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Usuario no disponible");
+            alerta.setHeaderText("Por favor, cambie de usuario.");
+            alerta.showAndWait();
+            return;
+        }
+        if (app.registerUser(name, mail, pass, birthDate, avatar) && app.login(name, pass)) {
+            Main.logInSuccesfull(name);
+        }
     }
 
     @FXML

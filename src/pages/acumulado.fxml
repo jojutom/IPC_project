@@ -50,7 +50,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <TextField />
+                        <TextField fx:id="dtotal" editable="false" />
                      </children>
                      <GridPane.margin>
                         <Insets left="10.0" />
@@ -67,7 +67,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <TextField />
+                        <TextField fx:id="titot" editable="false" />
                      </children>
                      <GridPane.margin>
                         <Insets left="10.0" />
@@ -84,7 +84,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <TextField />
+                        <TextField fx:id="subidatot" editable="false" />
                      </children>
                      <GridPane.margin>
                         <Insets left="10.0" />
@@ -101,7 +101,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
-                        <TextField />
+                        <TextField fx:id="bajadatot" editable="false" />
                      </children>
                      <GridPane.margin>
                         <Insets left="10.0" />

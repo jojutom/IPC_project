@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox style="-fx-background-color: #0C0C14;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox style="-fx-background-color: #0C0C14;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.AcumuladoController">
    <children>
       <GridPane prefHeight="429.0" prefWidth="600.0">
         <columnConstraints>

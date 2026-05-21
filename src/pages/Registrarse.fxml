@@ -13,10 +13,10 @@
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
@@ -24,23 +24,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
-   <children>
-      <GridPane prefHeight="598.0" prefWidth="977.0">
-         <columnConstraints>
-            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="271.3333231608073" minWidth="0.0" prefWidth="229.66665649414062" />
-            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="560.6666666666667" minWidth="250.0" prefWidth="461.8333435058594" />
-            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="253.0" minWidth="-Infinity" prefWidth="203.66668701171875" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
+<BorderPane prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
+   <left>
+      <StackPane fx:id="leftPane" maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="218.0" prefHeight="600.0" prefWidth="218.0" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <GridPane prefHeight="640.0" prefWidth="456.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <ImageView fx:id="leftImg" fitHeight="598.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/registerLeft.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+   </left>
+   <center>
+      <GridPane fx:id="mainGrid" maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="520.0" prefHeight="600.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                <columnConstraints>
-                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="191.9999796549479" minWidth="10.0" prefWidth="191.9999796549479" />
-                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="180.66665395100912" minWidth="10.0" prefWidth="32.66668701171875" />
-                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="201.9999796549479" minWidth="10.0" prefWidth="192.66666666666666" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="232.5" minWidth="10.0" prefWidth="232.5" />
+                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="180.66665395100912" minWidth="10.0" prefWidth="60.5" />
+                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="228.5" minWidth="10.0" prefWidth="227.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints fillHeight="false" maxHeight="148.6666463216146" minHeight="10.0" prefHeight="122.00000508626302" vgrow="SOMETIMES" />
@@ -115,8 +119,8 @@
                         <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#alreadyAccount" prefHeight="61.0" prefWidth="207.0" text="Ya tienes cuenta? Inicia sesión" />
                      </children>
                   </HBox>
-                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="105.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="44.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="44.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <HBox alignment="CENTER" prefHeight="119.0" prefWidth="214.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
                         <VBox alignment="CENTER" prefHeight="123.0" prefWidth="205.0">
@@ -194,35 +198,23 @@
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
-            </GridPane>
-            <Pane>
-               <children>
-                  <ImageView fx:id="leftImg" fitHeight="604.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../imgs/registerLeft.jpg" />
-                     </image>
-                     <effect>
-                        <InnerShadow />
-                     </effect>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane GridPane.columnIndex="2">
-               <children>
-                  <ImageView fx:id="rightImg" fitHeight="604.0" fitWidth="221.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@../imgs/registerRight.jpg" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                     <effect>
-                        <InnerShadow />
-                     </effect>
-                  </ImageView>
-               </children>
-            </Pane>
-         </children>
       </GridPane>
-   </children>
-</HBox>
+   </center>
+   <right>
+      <StackPane fx:id="rightPane" maxHeight="Infinity" maxWidth="Infinity" prefWidth="220.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <ImageView fx:id="rightImg" fitHeight="598.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/registerRight.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+   </right>
+</BorderPane>

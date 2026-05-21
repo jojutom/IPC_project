@@ -30,9 +30,6 @@ public class FXMLController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void mostrarPantallaPerfil(ActionEvent event) {
-    }
 
     @FXML
     private void handleMouseEntered(MouseDragEvent event) {
@@ -40,6 +37,14 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void handleMouseExited(MouseDragEvent event) {
+    }
+
+    @FXML
+    private void modifyAccount(ActionEvent event) {
+    }
+
+    @FXML
+    private void showHistory(ActionEvent event) {
     }
     
 }

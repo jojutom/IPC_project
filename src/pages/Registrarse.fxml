@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
@@ -23,7 +24,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
    <children>
       <GridPane prefHeight="598.0" prefWidth="977.0">
          <columnConstraints>
@@ -114,7 +115,7 @@
                         <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#alreadyAccount" prefHeight="61.0" prefWidth="207.0" text="Ya tienes cuenta? Inicia sesión" />
                      </children>
                   </HBox>
-                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="51.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Separator orientation="VERTICAL" prefHeight="119.0" prefWidth="105.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <HBox alignment="CENTER" prefHeight="119.0" prefWidth="214.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
@@ -194,7 +195,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </GridPane>
-            <VBox minWidth="25.0" prefHeight="200.0" prefWidth="100.0">
+            <Pane>
                <children>
                   <ImageView fx:id="leftImg" fitHeight="604.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -205,8 +206,8 @@
                      </effect>
                   </ImageView>
                </children>
-            </VBox>
-            <VBox minWidth="25.0" prefHeight="604.0" prefWidth="254.0" GridPane.columnIndex="2">
+            </Pane>
+            <Pane GridPane.columnIndex="2">
                <children>
                   <ImageView fx:id="rightImg" fitHeight="604.0" fitWidth="221.0" pickOnBounds="true">
                      <image>
@@ -220,7 +221,7 @@
                      </effect>
                   </ImageView>
                </children>
-            </VBox>
+            </Pane>
          </children>
       </GridPane>
    </children>

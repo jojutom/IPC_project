@@ -52,5 +52,10 @@ public class AutenticarController implements Initializable {
         alerta.setContentText("Revise los datos introducidos e inténtelo de nuevo.");
         alerta.showAndWait();
     }
+
+    @FXML
+    private void register(ActionEvent event) {
+        Main.registerShow();
+    }
     
 }

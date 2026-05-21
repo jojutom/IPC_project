@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package menuprincipaldiego;
+package MenuPrincipal;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.layout.BorderPane;
-
 /**
  * FXML Controller class
  *
@@ -19,9 +19,9 @@ import javafx.scene.layout.BorderPane;
  */
 public class FXMLController implements Initializable {
 
+
     @FXML
     private BorderPane contenedorPrincipal;
-
     /**
      * Initializes the controller class.
      */
@@ -29,7 +29,14 @@ public class FXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void modifyAccount(ActionEvent event) {
+    }
 
+    @FXML
+    private void showHistory(ActionEvent event) {
+    }
 
     @FXML
     private void handleMouseEntered(MouseDragEvent event) {
@@ -39,12 +46,4 @@ public class FXMLController implements Initializable {
     private void handleMouseExited(MouseDragEvent event) {
     }
 
-    @FXML
-    private void modifyAccount(ActionEvent event) {
-    }
-
-    @FXML
-    private void showHistory(ActionEvent event) {
-    }
-    
 }

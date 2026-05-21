@@ -96,7 +96,7 @@
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="59.0" prefWidth="377.0" GridPane.rowIndex="5">
                      <children>
-                        <Hyperlink prefHeight="61.0" prefWidth="207.0" text="No tienes cuenta todavia? Registrarse" />
+                        <Hyperlink onAction="#register" prefHeight="61.0" prefWidth="207.0" text="No tienes cuenta todavia? Registrarse" />
                      </children>
                   </HBox>
                </children>

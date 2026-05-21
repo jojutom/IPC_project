@@ -5,6 +5,7 @@
  */
 package mapademo;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,15 +17,19 @@ import javafx.stage.Stage;
  *
  * @author jose
  */
-public class MapaDemoApp extends Application {
+public class Main extends Application {
+    
+    private Scene actScene;
+    private static Stage mainStage;
     
     @Override
     public void start(Stage stage) throws Exception {
+        mainStage = stage;
         Parent root = FXMLLoader.load(getClass().getResource("/pages/Registrarse.fxml"));
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/resources/logo.png")));
-        Scene scene = new Scene(root);
+        actScene = new Scene(root);
         stage.setTitle("La Safor APPs");
-        stage.setScene(scene);
+        stage.setScene(actScene);
         stage.show();
     }
 
@@ -34,5 +39,31 @@ public class MapaDemoApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    public static void logInShow() {
+        try {
+            Parent newRoot = FXMLLoader.load(Main.class.getResource("/pages/Autenticar.fxml"));
+           
+            mainStage.getScene().setRoot(newRoot);
+            
+        } catch (IOException e) {
+        }
+    }
+    
+    public static void logInSuccesfull(String nick) {
+    
+    }
+    
+    public static void registerShow() {
+        try {
+            Parent newRoot = FXMLLoader.load(Main.class.getResource("/pages/Registrarse.fxml"));
+           
+            mainStage.getScene().setRoot(newRoot);
+            
+        } catch (IOException e) {
+        }
+    }
+    
+    
     
 }

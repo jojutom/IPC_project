@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="714.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="714.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.AutenticarController">
    <children>
       <GridPane prefHeight="442.0" prefWidth="717.0">
         <columnConstraints>
@@ -71,7 +71,7 @@
                         <VBox alignment="CENTER" prefHeight="77.0" prefWidth="213.0">
                            <children>
                               <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefWidth="367.0" styleClass="label-form" text="*Nickname" />
-                              <TextField prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
+                              <TextField fx:id="nickInput" prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
                            </children>
                         </VBox>
                      </children>
@@ -84,14 +84,14 @@
                         <VBox prefHeight="77.0" prefWidth="213.0">
                            <children>
                               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="199.0" styleClass="label-form" text="*Contraseña" />
-                              <PasswordField prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
+                              <PasswordField fx:id="passInput" prefHeight="37.0" prefWidth="188.0" styleClass="card-container" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="111.0" prefWidth="369.0" GridPane.rowIndex="4">
                      <children>
-                        <Button mnemonicParsing="false" styleClass="btn-primary" text="AUTENTICAR" />
+                        <Button mnemonicParsing="false" onAction="#tryLogIn" styleClass="btn-primary" text="AUTENTICAR" />
                      </children>
                   </HBox>
                   <HBox alignment="BOTTOM_CENTER" prefHeight="59.0" prefWidth="377.0" GridPane.rowIndex="5">

@@ -14,7 +14,9 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import mapademo.Main;
 import upv.ipc.sportlib.SportActivityApp;
 import upv.ipc.sportlib.User;
 
@@ -53,6 +55,10 @@ public class RegistrarseController implements Initializable {
     private ImageView rightImg;
     @FXML
     private ImageView leftImg;
+    @FXML
+    private Pane paneLeft;
+    @FXML
+    private Pane paneRight;
 
     /**
      * Initializes the controller class.
@@ -91,6 +97,8 @@ public class RegistrarseController implements Initializable {
             }
 
             // al menos 1 minúscula, 1 mayúscula, 1 dígito, 1 símbolo de los permitidos
+            // el regex ha sido pedido a la IA con el siguiente prompt:
+            // dime q .matches debo usar para que cumpla lo siguiente con al menos una mayúscula, una minúscula, undígito y un símbolo (!@#$%&*()-+=)
             String passRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%&*()\\-+=]).+$";
             if (!nV.matches(passRegex)) {
                 checkCanRegister(1, false);
@@ -116,17 +124,10 @@ public class RegistrarseController implements Initializable {
                 checkCanRegister(3, true);
                 wrongDate.setStyle("-fx-fill: green;");
             } else {
-                // Si la fecha se borra o es nula
                 checkCanRegister(3, false);
                 wrongDate.setStyle("-fx-fill: red;");
             }
-        });
-
-        leftImg.fitWidthProperty().bind(((javafx.scene.layout.Region) leftImg.getParent()).widthProperty());
-        leftImg.fitHeightProperty().bind(((javafx.scene.layout.Region) leftImg.getParent()).heightProperty());
-
-        rightImg.fitWidthProperty().bind(((javafx.scene.layout.Region) rightImg.getParent()).widthProperty());
-        rightImg.fitHeightProperty().bind(((javafx.scene.layout.Region) rightImg.getParent()).heightProperty());
+        });        
     }    
     
     private void checkCanRegister(int i, boolean state) {
@@ -140,6 +141,7 @@ public class RegistrarseController implements Initializable {
 
     @FXML
     private void alreadyAccount(ActionEvent event) {
+        Main.logInShow();
     }
 
     @FXML

@@ -26,11 +26,11 @@
 
 <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
    <children>
-      <GridPane prefHeight="598.0" prefWidth="977.0">
+      <GridPane prefHeight="598.0" prefWidth="977.0" maxHeight="Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS">
          <columnConstraints>
-            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="271.3333231608073" minWidth="0.0" prefWidth="229.66665649414062" />
-            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="560.6666666666667" minWidth="250.0" prefWidth="461.8333435058594" />
-            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="253.0" minWidth="-Infinity" prefWidth="203.66668701171875" />
+         <ColumnConstraints fillWidth="true" halignment="LEFT" hgrow="ALWAYS" maxWidth="271.3333231608073" minWidth="0.0" prefWidth="229.66665649414062" />
+         <ColumnConstraints fillWidth="true" hgrow="ALWAYS" maxWidth="560.6666666666667" minWidth="250.0" prefWidth="461.8333435058594" />
+         <ColumnConstraints fillWidth="true" halignment="RIGHT" hgrow="ALWAYS" maxWidth="253.0" minWidth="-Infinity" prefWidth="203.66668701171875" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -195,7 +195,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </GridPane>
-            <Pane>
+            <Pane GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                <children>
                   <ImageView fx:id="leftImg" fitHeight="604.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -207,9 +207,9 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane GridPane.columnIndex="2">
+            <Pane GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                <children>
-                  <ImageView fx:id="rightImg" fitHeight="604.0" fitWidth="221.0" pickOnBounds="true">
+                  <ImageView fx:id="rightImg" fitHeight="604.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imgs/registerRight.jpg" />
                      </image>

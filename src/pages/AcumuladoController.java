@@ -32,10 +32,10 @@ public class AcumuladoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        dtotal.setText(String.valueOf(NombreDeTuClaseGlobal.distanciaTotal));
-        titot.setText(String.valueOf(NombreDeTuClaseGlobal.tiempoTotal));
-        subidatot.setText(String.valueOf(NombreDeTuClaseGlobal.metrosSubida));
-        bajadatot.setText(String.valueOf(NombreDeTuClaseGlobal.metrosBajada));
+       // dtotal.setText(String.valueOf(NombreDeTuClaseGlobal.distanciaTotal));
+       // titot.setText(String.valueOf(NombreDeTuClaseGlobal.tiempoTotal));
+     //   subidatot.setText(String.valueOf(NombreDeTuClaseGlobal.metrosSubida));
+     //   bajadatot.setText(String.valueOf(NombreDeTuClaseGlobal.metrosBajada));
     }    
     
 }

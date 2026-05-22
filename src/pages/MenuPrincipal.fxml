@@ -29,7 +29,7 @@
                   <Button mnemonicParsing="false" onAction="#modifyAccount" prefHeight="23.0" prefWidth="122.0" text="Modificar perfil" />
                   <Button mnemonicParsing="false" onAction="#showHistory" text="Historia de sesiones" />
                   <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="158.0" style="-fx-border-color: black;" VBox.vgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" styleClass="btn-danger" text="Cerrar Sesión">
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="102.0" styleClass="btn-danger" text="Cerrar Sesión">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -52,10 +52,10 @@
             </ImageView>
             <VBox alignment="CENTER" prefHeight="534.0" prefWidth="238.0" spacing="18.0">
                <children>
-                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar GPX" textFill="#0f172a" />
-                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar Mapa" textFill="#0f172a" VBox.vgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Actividades" textFill="#0f172a" />
-                  <Button mnemonicParsing="false" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Últimos 31 días" textFill="#0f172a" />
+                  <Button mnemonicParsing="false" onAction="#importGPX" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar GPX" textFill="#0f172a" />
+                  <Button mnemonicParsing="false" onAction="#importMap" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Importar Mapa" textFill="#0f172a" VBox.vgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#showActivies" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Actividades" textFill="#0f172a" />
+                  <Button mnemonicParsing="false" onAction="#seeHistory" onMouseDragEntered="#handleMouseEntered" onMouseDragExited="#handleMouseExited" prefHeight="43.0" prefWidth="200.0" styleClass="btn-primary" text="Últimos 31 días" textFill="#0f172a" />
                </children>
             </VBox>
          </children>

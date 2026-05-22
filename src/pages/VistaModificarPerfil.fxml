@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-background-radius: 15;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.perfil.VistaModificarPerfilController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-background-radius: 15;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.VistaModificarPerfilController">
    <children>
       <Label stylesheets="@../../menuprincipaldiego/estilos.css" text="Modificar Perfil">
          <font>
@@ -36,12 +36,12 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #E2E8F0; fx-border-width: 2; -fx-border-radius: 100; -fx-background-radius: 100;">
+                        <ImageView fx:id="avatar" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #E2E8F0; fx-border-width: 2; -fx-border-radius: 100; -fx-background-radius: 100;">
                            <image>
                               <Image url="@../imgs/defaultAvatar.png" />
                            </image>
                         </ImageView>
-                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="181.0" style="-fx-background-color: #F1F5F9; -fx-background-radius: 20; -fx-padding: 8 20 8 20;" text="Seleccionar" textFill="#0f172a">
+                        <Button mnemonicParsing="false" onAction="#selectAvatar" prefHeight="33.0" prefWidth="181.0" style="-fx-background-color: #F1F5F9; -fx-background-radius: 20; -fx-padding: 8 20 8 20;" text="Seleccionar" textFill="#0f172a">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -81,22 +81,22 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <DatePicker maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="130.0" styleClass="date-picker" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField styleClass="text-field" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField styleClass="text-field" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" />
+                        <DatePicker fx:id="birthInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="130.0" styleClass="date-picker" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="mailInput" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="passInput" styleClass="text-field" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="nickInput" styleClass="text-field" stylesheets="@../../menuprincipaldiego/estilos.css" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
                </children>
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="126.0" prefWidth="499.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #F97316; -fx-text-fill: white; -fx-font-weight: 800; -fx-background-radius: 10; -fx-cursor: hand;" text="Guardar">
+                  <Button mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #F97316; -fx-text-fill: white; -fx-font-weight: 800; -fx-background-radius: 10; -fx-cursor: hand;" text="Guardar">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="114.0" styleClass="btn-menu-action" stylesheets="@../../menuprincipaldiego/estilos.css" text="Cancelar" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="114.0" styleClass="btn-menu-action" stylesheets="@../../menuprincipaldiego/estilos.css" text="Cancelar" />
                </children>
             </HBox>
          </children>

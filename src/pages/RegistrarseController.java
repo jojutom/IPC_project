@@ -75,7 +75,7 @@ public class RegistrarseController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         registerButton.setDisable(true);
-        
+       
         nicknameInput.textProperty().addListener( (obs, _, nV) -> {
             int length = nV.length();
             if ( length < 6 || length > 15 ) {

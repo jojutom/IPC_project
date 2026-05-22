@@ -10,7 +10,6 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -23,20 +22,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
+<BorderPane minHeight="600.0" minWidth="960.0" prefHeight="598.0" prefWidth="895.0" style="-fx-background-color: #FDF6F0;" stylesheets="@../resources/estilos.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.RegistrarseController">
    <left>
-      <StackPane fx:id="leftPane" maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="218.0" prefHeight="600.0" prefWidth="218.0" BorderPane.alignment="CENTER_LEFT">
+      <StackPane fx:id="leftPane" maxHeight="Infinity" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="218.0" prefHeight="600.0" prefWidth="218.0" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <ImageView fx:id="leftImg" fitHeight="598.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="leftImg" fitHeight="601.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/registerLeft.jpg" />
                </image>
-               <effect>
-                  <InnerShadow />
-               </effect>
             </ImageView>
-         </children>
-      </StackPane>
+         </children></StackPane>
    </left>
    <center>
       <GridPane fx:id="mainGrid" maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="520.0" prefHeight="600.0" prefWidth="500.0" BorderPane.alignment="CENTER">
@@ -202,20 +197,13 @@
       </GridPane>
    </center>
    <right>
-      <StackPane fx:id="rightPane" maxHeight="Infinity" maxWidth="Infinity" prefWidth="220.0" BorderPane.alignment="CENTER_RIGHT">
+      <StackPane fx:id="rightPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="214.0" BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <ImageView fx:id="rightImg" fitHeight="598.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="rightImg" fitHeight="606.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/registerRight.jpg" />
                </image>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-               <effect>
-                  <InnerShadow />
-               </effect>
             </ImageView>
-         </children>
-      </StackPane>
+         </children></StackPane>
    </right>
 </BorderPane>
